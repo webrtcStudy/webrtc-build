@@ -18,3 +18,31 @@ If it doesn't work for you, please file an issue.
 ### Rationale
 Being able to debug the webrtc native code was required for our [WebRTC .NET core](https://github.com/WonderMediaProductions/webrtc-dotnet-core) project
 
+
+
+==============================================================
+### this project will pull to webrtc-build webrtc dir (yanght)
+
+该工程会下载webrtc脚本到当前目录的webrtc文件夹下
+
+前提：下载depot_tools然后解压到某个目录，depot_tools目录的路径加到系统环境变量Path里，然后把该路径移到最前面（避免已安装的python与git造成影响）。
+
+步骤：
+#解决报错
+打开Windows PowerShell
+#执行
+set-executionpolicy remotesigned
+
+#set proxy
+set http_proxy=127.0.0.1:1080
+set https_proxy=127.0.0.1:1080
+
+#clone build project
+git clone https://github.com/webrtcStudy/webrtc-build.git
+
+#build
+cd webrtc-build
+./windows_build.bat
+
+
+

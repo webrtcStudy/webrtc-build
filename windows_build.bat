@@ -1,11 +1,14 @@
 @echo off
 
 REM Because of paths becoming too long in Windows/Python, we clone the webrtc code in c:\wc
-set "CLONE_DIR=c:\wc"
+cd %~dp0%
+
+set "CLONE_DIR=%cd%\webrtc"
 set "TOOLS_DIR=%localappdata%\WMP\depot_tools"
 set "BATCH_DIR=%~dp0%"
 set "OLD_PATH=%PATH%"
-set "WEBRTC_BRANCH=m73"
+set "WEBRTC_BRANCH=master"
+::set "WEBRTC_BRANCH=m73"
 
 REM H264 support can only be compiled with clang, not MSVC. 
 REM Downside is source debugging in Visual Studio is not yet suported when using clang :(
