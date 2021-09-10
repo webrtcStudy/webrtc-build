@@ -45,4 +45,7 @@ cd webrtc-build
 ./windows_build.bat
 
 
+### 如果手动编译完成，需要生成头文件等，可以直接调用脚本（注意.\webrtc斜杠方向）
+D:\workspace\webrtc-build\copy_webrtc_API.bat .\webrtc 0
+
 
