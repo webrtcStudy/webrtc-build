@@ -20,7 +20,7 @@ Being able to debug the webrtc native code was required for our [WebRTC .NET cor
 
 
 
-==============================================================
+------------------------------------------------------------------------------------
 ### this project will pull to webrtc-build webrtc dir (yanght)
 
 该工程会下载webrtc脚本到当前目录的webrtc文件夹下
@@ -43,6 +43,8 @@ git clone https://github.com/webrtcStudy/webrtc-build.git
 #build
 cd webrtc-build
 ./windows_build.bat
+
+------------------------------------------------------------------------------------
 
 ### 上面的脚本有问题，可能是分支的问题，需要手动编译的话，步骤如下：
 set http_proxy=127.0.0.1:1080
