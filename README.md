@@ -89,4 +89,44 @@ ninja -C windows_msvc_debug_x64
 
 D:\workspace\webrtc-build\copy_webrtc_API.bat .\webrtc 0
 
+### 新建vs工程
+添加依赖项
+
+#pragma comment(lib, "ws2_32.lib")
+
+#pragma comment(lib, "winmm.lib")
+
+#pragma comment(lib, "secur32.lib")
+
+#pragma comment(lib, "iphlpapi.lib")
+
+#pragma comment(lib, "crypt32.lib")
+
+#pragma comment(lib, "dmoguids.lib")
+
+#pragma comment(lib, "wmcodecdspuuid.lib")
+
+#pragma comment(lib, "amstrmid.lib")
+
+#pragma comment(lib, "msdmo.lib")
+
+#pragma comment(lib, "d3d11.lib")
+
+#pragma comment(lib, "dxgi.lib")
+
+添加预处理器定义
+
+NOMINMAX
+
+WIN32_LEAN_AND_MEAN
+
+WEBRTC_WIN
+
+_CRT_SECURE_NO_WARNINGS
+
+WIN32
+
+
+
+
 
