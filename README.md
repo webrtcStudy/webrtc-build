@@ -48,27 +48,41 @@ cd webrtc-build
 
 ### 上面的脚本有问题，可能是分支的问题，需要手动编译的话，步骤如下：
 set http_proxy=127.0.0.1:1080
+
 set https_proxy=127.0.0.1:1080
 
 mkdir webrtc-checkout
+
 cd webrtc-checkout
+
 fetch --nohooks webrtc
+
 gclient sync
 
 cd src
+
 git checkout master
+
 git pull
+
 gclient sync
 
+
 set DEPOT_TOOLS_WIN_TOOLCHAIN=0
+
 set GYP_GENERATORS=msvs-ninja,ninja
+
 set GYP_MSVS_VERSION=2017
 
 cd ..
-call gn gen ./windows_msvc_debug_x64  
+
+call gn gen ./windows_msvc_debug_x64
+
 ::或者call gn gen windows_msvc_release_x64 is_debug=false
 
+
 ninja -C windows_msvc_debug_x64
+
 ::或者ninja -C windows_msvc_release_x64
 
 ### 如果手动编译完成，需要生成头文件等，可以直接调用脚本（注意.\webrtc斜杠方向）
