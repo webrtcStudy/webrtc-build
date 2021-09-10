@@ -128,6 +128,10 @@ _CRT_SECURE_NO_WARNINGS
 WIN32
 
 
+代码添加:
+
+#pragma warning(disable:4996)
+
 
 
 
