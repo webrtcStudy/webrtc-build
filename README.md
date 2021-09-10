@@ -76,7 +76,12 @@ set GYP_MSVS_VERSION=2017
 
 cd ..
 
-call gn gen ./windows_msvc_debug_x64
+cd ..\..
+::gn gen windows_msvc_release_x64 --root="src" --args="target_cpu=\"x64\" is_debug=false use_rtti=true rtc_include_tests=false  symbol_level=0 is_clang=false"
+
+call gn gen windows_msvc_debug_x64 --root="src" --args="target_cpu=\"x64\" is_debug=true use_rtti=true rtc_include_tests=false  symbol_level=2 is_clang=false"
+
+::call gn gen ./windows_msvc_debug_x64
 
 ::或者call gn gen windows_msvc_release_x64 is_debug=false
 
