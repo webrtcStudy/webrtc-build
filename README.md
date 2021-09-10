@@ -90,6 +90,7 @@ ninja -C windows_msvc_debug_x64
 D:\workspace\webrtc-build\copy_webrtc_API.bat .\webrtc 0
 
 ### 新建vs工程
+https://www.jianshu.com/p/351b29e36243
 添加依赖项
 
 #pragma comment(lib, "ws2_32.lib")
