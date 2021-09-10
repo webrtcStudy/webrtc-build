@@ -133,5 +133,8 @@ WIN32
 #pragma warning(disable:4996)
 
 
+### 备注
+
+如果webrtc.lib是测试需要添加宏_LIBCPP_DEBUG到该工程
 
 
