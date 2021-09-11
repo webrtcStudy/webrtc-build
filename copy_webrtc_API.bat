@@ -33,11 +33,11 @@ xcopy /y /s /i /d %src%\p2p\*.h                          %include%\webrtc\p2p\
 
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ . 										
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ pc 										
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ call 										
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ call 	
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ test									
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ media\base 								
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ media\engine							
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ media\sctp							
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\include							
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ media\sctp									
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\include							
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_capture
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\audio_device\include				
@@ -46,22 +46,35 @@ call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\bitrate_con
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\congestion_controller\include		
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\remote_bitrate_estimator\include	
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\rtp_rtcp\include					
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\rtp_rtcp\mocks
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\rtp_rtcp\source					
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\utility\include					
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\rtp_rtcp\source\rtcp_packet
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\rtp_rtcp\source\deprecated	
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\utility\include	
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\async_audio_processing
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\desktop_capture
+				
 
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding\include		
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding\utility	
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding\codecs\interface	
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding\codecs\vp8\include	
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ modules\video_coding\codecs\vp9\include	
 
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_audio\include						
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_audio\include
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video\h264					
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video\include						
-call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video\libyuv\include					
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video\libyuv\include
+
+call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ common_video\generic_frame_descriptor	
 
 call %batchDir%\copy_include_folder %src%\ %include%\webrtc\ system_wrappers\include					
 
 call %batchDir%\copy_include_folder %src%\ %include%\ third_party\libyuv\include\libyuv
+call %batchDir%\copy_include_folder %src%\ %include%\ third_party\libyuv\include
+call %batchDir%\copy_include_folder %src%\ %include%\ third_party\jsoncpp\source\include\json
 
 if %h264%==1 then (
     call %batchDir%\copy_include_folder %src%\ %include%\ third_party\openh264\src\codec\api\svc
