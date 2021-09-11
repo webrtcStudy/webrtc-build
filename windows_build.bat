@@ -29,6 +29,8 @@ set PATH="%TOOLS_DIR%";%OLD_PATH%
 
 echo ----------------------------------------------------------------
 
+python -m pip install pywin32
+
 if NOT "%1"=="" goto %1
 
 if not exist %CLONE_DIR% (
