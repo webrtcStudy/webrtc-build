@@ -102,7 +102,7 @@ echo Generating debug build script, H264=%h264%...
 if %h264%==1 (
     call gn gen windows_clang_debug_x64 --root="src" --args="target_cpu=\"x64\" is_debug=true use_rtti=true rtc_include_tests=false  symbol_level=0 proprietary_codecs=true use_openh264=true ffmpeg_branding=\"Chrome\""
 ) else (
-    call gn gen windows_msvc_debug_x64 --root="src" --args="target_cpu=\"x64\" is_debug=true use_rtti=true rtc_include_tests=false  symbol_level=2 is_clang=false"
+    call gn gen windows_msvc_debug_x64 --root="src" --args="target_cpu=\"x64\" is_debug=true use_rtti=true rtc_include_tests=false  symbol_level=2 is_clang=false enable_iterator_debugging=true"
 )
 if errorlevel 1 goto :error
 
